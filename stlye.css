@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-header: 'Staatliches' , cursive;
+  --ff-texting: 'Palanquin' , sans-serif;
+
+  --bc-body: #fff;
+  --bc-header: #8e9aaf;
+  --fc-header: #ffffff;
+  --bc-main: #eff1ff;
+  --fc-main: #23053a;
+  --bc-figcaption: #feeafa;
+  --fc-figcaption: #4a4e69;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bc-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: var(--bc-header);
+
+  width: 100%;
+  
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  margin: 3.2rem 0 3.2rem;
+}
+
+main {
+  background-color: var(--bc-main);
+  width: 38.4rem;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 1.4rem 3.2rem 6.3rem 3.2rem;
+}
+
+main p {
+  font-family: var(--ff-texting);
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  text-align: center;
+  color: var(--fc-main);
+  margin-bottom: 6.3rem;
+}
+
+.cardIce {
+  position: relative;
+  margin-bottom: 3.2rem;
+
+  animation-name: card-ice-downTop;
+  animation-duration: 1.2s;
+}
+
+.cardIce img {
+  width: 32rem;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.cardIce figcaption {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  background-color: var(--bc-figcaption);
+
+  border-radius: 2rem;
+
+  width: 11.2rem;
+  height: 3.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--fc-figcaption);
+
+  font-family: var(--ff-header);
+
+  font-weight: 400;
+  font-size: 2.0rem;
+  text-transform: uppercase;
+
+  animation-name: card-ice-topDown;
+  animation-duration: 1.8s;
+}
+
+#cardIce-last {
+  margin-bottom: 0;
+}
+
+@keyframes card-ice-downTop {
+  0% {
+    opacity: 0;
+    transform: translateY(5.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes card-ice-topDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-5.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
